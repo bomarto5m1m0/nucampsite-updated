@@ -1,10 +1,10 @@
+import { useReducer } from 'react';
 import { Col, Row } from 'reactstrap';
 import Partner from './Partner';
 import { selectAllPartners } from './partnersSlice';
 
 const PartnersList = () => {
-	const partners = selectAllPartners();
-
+	const partners = useReducer(selectAllPartners);
 	return (
 		<Col className="mt-4">
 			{partners.map((partner) => {
