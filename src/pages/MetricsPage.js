@@ -1,32 +1,26 @@
 import { Col, Row, Container, Card, CardBody, CardHeader } from 'reactstrap';
 import SubHeader from '../components/SubHeader';
-import PartnersList from '../features/partners/ PartnersList';
+import PartnersList from '../features/partners/PartnersList';
+import PieChartComponent from '../components/Charts/PieChart';
 
 
-const AboutPage = () => {
+const MetricsPage = () => {
 	return (
 		<Container>
-            <SubHeader current='About Us' />
+            <SubHeader current='Metrics' />
 			<Row className="row-content">
 				<Col sm="6">
-					<h3>Our Mission </h3>
-					<p>
-						We present a curated database of the best campsites in the vast woods and backcountry of the
-						World Wide Web Wilderness. We increase access to adventure for the public while promoting safe
-						and respectful use of resources. The expert wilderness trekkers on our staff personally verify
-						each campsite to make sure that they are up to our standards. We also present a platform for
-						campers to share reviews on campsites they have visited with each other.
-					</p>
+				<PieChartComponent />
 				</Col>
 
 				<Col sm="6">
 					<Card>
 						<CardHeader>
-							<h3>Facts at a Glance</h3>
+							<h3>Missions</h3>
 						</CardHeader>
 						<CardBody>
 							<dl className="row">
-								<dt className="col-6">Founded</dt>
+								<dt className="col-6">Summary</dt>
 								<dd className="col-6">February 3, 2016</dd>
 								<dt className="col-6">No. of Campsites in 2019</dt>
 								<dd className="col-6">563</dd>
@@ -66,4 +60,4 @@ const AboutPage = () => {
 	);
 };
 
-export default AboutPage;
+export default MetricsPage;
